@@ -7,7 +7,7 @@
     "build": "./node_modules/.bin/babel src -d build --source-maps inline",
     "start": "node build/server.js",
     "dev": "nodemon src/server.js --exec babel-node",
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
