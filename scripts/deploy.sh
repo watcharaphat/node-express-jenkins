@@ -1,4 +1,3 @@
 #!/usr/bin/env sh
 
-docker-compose down
-docker-compose up
+docker run -p 3000:3000 .
