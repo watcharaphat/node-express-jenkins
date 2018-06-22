@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/watcharaphat/node-express-jenkins#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0"
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
