@@ -11,12 +11,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -f Dockerfile -t watcharaphat/api .'
+                sh 'npm install'
             }
         }
         stage('Test') { 
             steps {
                 sh 'npm test'
+            }
+        }
+        stage('Deployment') {
+            stages {
+                sh './scripts/deploy.sh'
             }
         }
     }
