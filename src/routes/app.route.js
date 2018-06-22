@@ -4,6 +4,6 @@ export default function(app) {
   });
 
   app.route('/api').get((req, res, err) => {
-    res.json({version: '1.0.0'});
+    res.json({version: '1.0.1'});
   });
 }
