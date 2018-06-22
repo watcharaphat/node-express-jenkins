@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src -d build --source-maps inline",
-    "start": "nodemon src/server.js --exec babel-node",
+    "start": "node build/server.js",
+    "dev": "nodemon src/server.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,14 +20,12 @@
   },
   "homepage": "https://github.com/watcharaphat/node-express-jenkins#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-es2017": "^6.24.1"
-  },
-  "dependencies": {
-    "@babel/preset-env": "^7.0.0-beta.51",
-    "babel-cli": "^6.26.0",
     "express": "^4.16.3"
   }
 }
