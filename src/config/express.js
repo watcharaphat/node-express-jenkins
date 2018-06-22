@@ -2,7 +2,7 @@ import express from 'express';
 import appRoute from '../routes/app.route';
 
 export default function() {
-  const app = express();
+  const app = new express();
 
   app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', req.headers.origin || "*");

@@ -1,19 +1,21 @@
-const supertest = require('supertest');
+import chai from 'chai';
+import request from 'supertest';
+import app from '../src/server';
+
 // eslint-disable-next-line
-const should = require('should');
+const expect = chai.expect;
 
-const server = supertest.agent('http://localhost:3000');
-
-describe('SAMPLE unit test', () => {
-  // #1
-  it('should return homepage', (done) => {
-    server
-      .get('/')
-      .expect('Content-Type', /json/)
-      .expect(200)
+describe('API Tests', () => {
+  it('should return version number', (done) => {
+    request(app)
+      .get('/api')
       .end((err, res) => {
-        res.status.should.equal(200);
+        // eslint-disable-next-line
+        expect(res.body.version).to.be.ok;
+        expect(res.statusCode).to.be.equal(200);
         done();
       });
   });
 });
+
+app.close();

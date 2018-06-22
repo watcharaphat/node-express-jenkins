@@ -7,7 +7,7 @@
     "build": "./node_modules/.bin/babel src -d build --source-maps inline",
     "start": "node build/server.js",
     "dev": "nodemon src/server.js --exec babel-node",
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/watcharaphat/node-express-jenkins#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "coffeescript": "^2.3.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.12.0",
@@ -32,6 +33,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
     "express": "^4.16.3"
   }
 }
