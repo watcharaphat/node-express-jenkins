@@ -6,4 +6,4 @@ if ! [ -x "$(command -v pm2)" ]; then
   npm install -g pm2
 fi
 
-pm2 start node-express-jenkins
+pm2 start build/server.js
