@@ -7,7 +7,7 @@
     "build": "./node_modules/.bin/babel src -d build --source-maps inline",
     "start": "node build/server.js",
     "dev": "nodemon src/server.js --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,10 @@
     "babel-cli": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.12.0"
+    "eslint-plugin-import": "^2.12.0",
+    "mocha": "^5.2.0",
+    "should": "^13.2.1",
+    "supertest": "^3.1.0"
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
