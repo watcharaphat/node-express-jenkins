@@ -6,4 +6,4 @@ if ! [ -x "$(command -v pm2)" ]; then
   npm install -g pm2
 fi
 
-pm2 start build/server.js
+pm2-runtime build/server.js
