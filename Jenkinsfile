@@ -21,8 +21,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                sh 'npm run build'
-                sh 'pm2 start node-express-jenkins'
+                sh './scripts/deploy.sh'
             }
         }
     }

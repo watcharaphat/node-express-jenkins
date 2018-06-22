@@ -1,3 +1,9 @@
 #!/usr/bin/env sh
 
-npm start
+npm run build
+
+if ! [ -x "$(command -v pm2)" ]; then
+  npm install -g pm2
+fi
+
+pm2 start node-express-jenkins
